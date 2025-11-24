@@ -1,16 +1,14 @@
 #include<stdio.h>
-int main() {
-    float num1, num2, num3, average;
-
-    // Input three numbers
-    printf("Enter three numbers: ");
-    scanf("%f %f %f", &num1, &num2, &num3);
-
-    // Calculate average
-    average = (num1 + num2 + num3) / 3;
-
-    // Display the average
-    printf("Average = %.2f\n", average);
-
-    return 0;
-}
+void main() {
+    int n, first = 0, second = 2, next, c;
+    printf("Enter the number of terms you want in even numbers: ");
+    scanf("%d", &n);
+    printf("even numbers:\n");
+    printf("%d\n%d\n", first, second); 
+    for (c = 2; c <= n; c++) {
+            next = first + second;
+            printf("%d\n", next);
+            first = second;
+            second = next;
+        }
+    }
